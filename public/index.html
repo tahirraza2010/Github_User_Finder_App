@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #141c2f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      background-color: #1f2a48;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: #1f2a48;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #0079ff;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .card {
+      margin-top: 20px;
+      background-color: #1f2a48;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+
+    .stats div {
+      text-align: center;
+    }
+
+    .stats div span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .search-box i {
+      color: #ffffff;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .error-message {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>GitHub User Finder</h1>
+    <div class="search-box">
+      <i class="fa fa-search"></i>
+      <input type="text" id="username" placeholder="Enter GitHub username">
+      <button onclick="getUserData()">Search</button>
+    </div>
+    <div id="result" class="card text-light" style="display: none;"></div>
+  </div>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
